@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }}{% endblock title %}
+{% block content %}
+<h1>{{ article.title }}</h1>
+<p class="meta">
+	<small>
+		<span>
+			{% if article.author %}
+				<a href="{{ SITEURL }}/author/{{ article.author.slug }}/">{{ article.author }}</a> - {% endif %}</span><span>{{ article.locale_date }}</span> - <span class="tags">{% if article.tags %}{% for tag in article.tags %}<a href="/tag/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+			{% endif %}
+		</span>
+	</small>
+	</p>
+	<div class="entry-content">
+		<p>
+			{{ article.content }}
+		</p>
+	</div>
+	{% if DISQUS_SITENAME %}
+		{% include "_disqus.html" %}
+	{% endif %}
+{% endblock content %}
+

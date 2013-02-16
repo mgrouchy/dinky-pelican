@@ -1,0 +1,5 @@
+<ul class="article-list">
+	{% for article in articles %}
+	<li><span class="article-title">{{ article.title }}</span><span class="article-sep"><span class="article-date">{{ article.locale_date }}</span></li>
+	{% endfor %}
+</ul>

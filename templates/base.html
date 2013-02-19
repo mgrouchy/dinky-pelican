@@ -25,12 +25,16 @@
 	<body>
 		<div class="wrapper">
 			<header>
-			<h1 class="header">{{ SITENAME }}</h1>
+			<h1 class="header"><a href="{{ SITEURL }}" class="home-link">{{ SITENAME }}</a></h1>
 			  <p class="header">{{ BIO }}</p>
 				<ul>
-					<li><a class="" href="#">Projects</a></li>
-					<li class="twitter"><a class="" href="">Twitter</a></li>
-					<li class="github"><a class="" href="">Github</a></li>
+					<li><a class="" href="{{ SITEURL }}/projects.html">Projects</a></li>
+					{% if TWITTER_INTEGRATION_ENABLED %}
+					<li class=""><a class="twitter" href="http://twitter.com/{{ TWITTER_USERNAME }}">@{{ TWITTER_USERNAME }}</a></li>
+					{% endif %}
+					{% if GITHUB_INTEGRATION_ENABLED %}
+						<li class=""><a class="buttons github" href="http://github.com/{{ GITHUB_USERNAME }}">Github</a></li>
+					{% endif %}
 				</ul>
 				<p class="header"></p>
 			</header>
@@ -149,7 +153,7 @@
 				{% endblock content %}
 				</section>
 				<footer>
-						<p> Using the <a href="http://github.com/mgrouchy/dinky-pelican">Dinky-Pelican</a> theme.</br><span class="copyright" style="font-size:10px;">© {{ SITENAME }} - {{ COPYRIGHT_YEARS }}</span><br/></p>
+					<span class="copyright" style="font-size:10px;">© {{ SITENAME }} - {{ COPYRIGHT_YEARS }}</span><br/></p>
 					</footer>
 						</div>
 						<!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->

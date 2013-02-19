@@ -414,3 +414,21 @@ footer {
     color:#444;
   }
 }
+
+ul.article-list {
+	margin-top:25px;
+}
+
+
+ul.article-list li {
+	list-style: none;
+}
+
+ul.article-list li span.article-date {
+	float: right;
+}
+
+span.article-date {
+	float:right;
+	font-size: 13px;
+}

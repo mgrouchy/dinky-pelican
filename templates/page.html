@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }}{% endblock title %}
+{% block content %}
+<h1><a class="article-title" href="{{ SITEURL }}/{{ page.url }}">{{ article.title }}</a></h1>
+	<div class="entry-content">
+		<p>
+			{{ page.content }}
+		</p>
+	</div>
+	{% if DISQUS_SITENAME %}
+		{% include "_disqus.html" %}
+	{% endif %}
+{% endblock content %}
+

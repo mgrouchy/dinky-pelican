@@ -432,3 +432,9 @@ span.article-date {
 	float:right;
 	font-size: 13px;
 }
+
+.page-content h2 {
+	border-bottom: 0px;
+	padding-bottom: 1px;
+
+}

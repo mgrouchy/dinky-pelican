@@ -37,6 +37,9 @@
 					{% if GITHUB_INTEGRATION_ENABLED %}
 						<li class=""><a class="" href="http://github.com/{{ GITHUB_USERNAME }}"><i class="icon-github"></i> Code</a></li>
 					{% endif %}
+					{% if EMAIL %}
+						<li class=""><a class="" href="mailto:{{ EMAIL }}"><i class="icon-envelope"></i> Email</a></li>
+					{% endif %}
 				</ul>
 				<p class="header"></p>
 			</header>

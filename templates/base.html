@@ -30,15 +30,15 @@
 			<h1 class="header"><a href="{{ SITEURL }}" class="home-link">{{ SITENAME }}</a></h1>
 			  <p class="header">{{ BIO }}</p>
 				<ul>
-					<li><a class="" href="{{ SITEURL }}/projects.html"><i class="icon-beaker"></i> Projects</a></li>
+					<li><a class="buttons" href="{{ SITEURL }}/projects.html"><i class="icon-beaker"></i> Projects</a></li>
 					{% if TWITTER_INTEGRATION_ENABLED %}
-					<li class=""><a class="twitter" href="http://twitter.com/{{ TWITTER_USERNAME }}"><i class="icon-twitter"></i> @{{ TWITTER_USERNAME }}</a></li>
+					<li class="buttons"><a class="twitter" href="http://twitter.com/{{ TWITTER_USERNAME }}"><i class="icon-twitter"></i> @{{ TWITTER_USERNAME }}</a></li>
 					{% endif %}
 					{% if GITHUB_INTEGRATION_ENABLED %}
-						<li class=""><a class="" href="http://github.com/{{ GITHUB_USERNAME }}"><i class="icon-github"></i> Code</a></li>
+						<li class="buttons"><a class="" href="http://github.com/{{ GITHUB_USERNAME }}"><i class="icon-github"></i> Code</a></li>
 					{% endif %}
 					{% if EMAIL %}
-						<li class=""><a class="" href="mailto:{{ EMAIL }}"><i class="icon-envelope"></i> Email</a></li>
+						<li class="buttons"><a class="" href="mailto:{{ EMAIL }}"><i class="icon-envelope"></i> Email</a></li>
 					{% endif %}
 				</ul>
 				<p class="header"></p>
